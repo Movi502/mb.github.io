@@ -1,0 +1,217 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #333;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Home Section */
+#home {
+    background-image: url('img/img0.png.crdownload');
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+    height: 500px;
+    color: black;
+    
+}
+
+
+.home-content {
+   text-align: left;
+   margin-top: 13%;
+   margin-left: 20%;
+}
+#home h1 {  
+    font-size: 3em;
+    animation: fadeIn 4s;
+    color: black;
+
+}
+#home p {
+    color: black;
+    animation: fadeIn 10s;
+    font-weight: bold;
+}
+
+#home button {
+    background: #ff4757;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 10s;
+    margin-top: 2%;
+}
+
+#home button:hover {
+    background: #ff6b81;
+}
+
+/* About, Services, Calculator, Contact Sections */
+section {
+    background-color:white;
+    padding: 30px;
+    text-align: center;
+    color: black;
+
+}
+/* Carousel Container */
+.h2 {
+    font-size: 40px;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    margin-top: 2%;
+    overflow: hidden;
+    
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-image {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+
+
+/* Services Section */
+#services {
+    text-align: center;
+    padding: 50px;
+    background-color:black;
+    color: white;
+}
+
+.service {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px); /* Card lifts up slightly on hover */
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.service:hover .service-image {
+    transform: scale(1.05); /* Image scales up slightly on hover */
+}
+
+.service h3 {
+    font-size: 1.5em;
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+.service p {
+    color: #666;
+}
+
+#calculator {
+    background-color: white;
+    margin-top: 4%;
+}
+
+}
+.calci {
+    font-size: 32px;
+}
+.calorie-img {
+    
+    position: relative;
+    left: 4%;
+    
+}
+#contact {
+    background-color: rgb(150, 146, 146);
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    #home h1 {
+        font-size: 2em;
+    }
+
+    #home button {
+        font-size: 1em;
+    }
+}

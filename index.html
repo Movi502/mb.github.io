@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FitNess Gym</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#calculator">Calorie Calculator</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-content">
+        <h1>Welcome to FitNess Gym</h1>
+        <p>Start a journey to a healthier life .</p>
+        <button onclick="window.location.href='#contact'">Join Now</button>
+        </div>
+    </section>
+    <br><br><br><br><br><br>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="h2">About Us</h2>
+        <p>FitNess Gym is dedicated to assisting you in reaching your wellness objectives. Our cutting-edge facilities and knowledgeable experts are here to help you at every stage.</p>
+    
+        <!-- Carousel Container -->
+        <div class="carousel">
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-slides">
+                <img src="img/img4.jpg" class="carousel-image" alt="Facility 1" height="600px">
+                <img src="img/img2.jpg" class="carousel-image" alt="Facility 2" height="600px">
+                <img src="img/img6.jpg" class="carousel-image" alt="Facility 3" height="600px">
+            </div>
+            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+    
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <img src="img/HIIT.jpg" alt="HIIT Workout" class="service-image">
+            <h3>HIIT (High-Intensity Interval Training)</h3>
+            <p>Engage in high-intensity exercises to increase cardiovascular fitness and burn calories rapidly.</p>
+        </div>
+        <div class="service">
+            <img src="img/strength_training_1024x1024.webp" alt="Strength Training" class="service-image">
+            <h3>Strength Training</h3>
+            <p>Our professionally led strength training sessions will help you gain muscle and strength.</p>
+        </div>
+        <div class="service">
+            <img src="img/yoga.jpg" alt="Yoga Class" class="service-image">
+            <h3>Yoga</h3>
+            <p>Our peaceful and exciting yoga courses will help you achieve flexibility and balance.</p>
+        </div>
+    </section>
+    
+
+    <!-- Calorie Calculator Section -->
+    <section id="calculator">
+        <h2 class="calci">Calorie Burn Calculator</h2>
+        <p>Enter your workout details to estimate calories burned.</p>
+        <form onsubmit="calculateCalories(); return false;">
+            <label for="duration">Workout Duration (minutes):</label>
+            <input type="number" id="duration" required>
+            <br>
+            <label for="intensity">Workout Intensity (1-10):</label>
+            <input type="number" id="intensity" min="1" max="10" required>
+            <button type="submit">Calculate</button>
+            <br><br>
+        </form>
+        <p id="result"></p>
+        <img src="img/calorie-deficit.png"  class="calorie-img" style="height: 350px;">
+        <br><br><br><br><br><br>
+    </section>
+
+    <!-- Contact Section -->
+     
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
